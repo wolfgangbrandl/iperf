@@ -1,0 +1,492 @@
+    1  exit
+    2  exit
+    3  dig localhost
+    4  exit
+    5  exit
+    6  ifconfig
+    7  sudo vi /etc/hosts
+    8  exit
+    9  history
+   10  exit
+   11  ll
+   12  exit
+   13  locale
+   14  vi gitkey
+   15  vi token
+   16  ls
+   17  lab build-template start
+   18  cd
+   19  vi token
+   20  !
+   21  ls -xal
+   22  vi token
+   23  l
+   24  rm .token.swp 
+   25  vi token
+   26  oc
+   27  lab-configure
+   28  git clone https://github.com/wolfgangbrandl/DO288-apps.git
+   29  ls
+   30  cd DO288-apps/
+   31  git status
+   32  head README.md 
+   33  cd ~
+   34  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   35  lab docker-build start
+   36  cd DO288-apps/
+   37  git checkout main
+   38  git checkout -b docker-build
+   39  git push -u origin  docker-build
+   40  cat ubi-echo/Dockerfile 
+   41  source /usr/local/etc/ocp4.config
+   42  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+   43  oc new-project ${RHT_OCP4_DEV_USER}-docker-build
+   44  oc projects
+   45  oc get projects
+   46  oc new-app --name echo https://githuuuuuuuuuuuuuuuuuuuubbbbbbbbbbbbbbbbbb.................com/${RHT_OCP4_GITHUB_USER}/DO288-apps#docker-build
+   47  vi a
+   48  bash a
+   49  env
+   50  source /usr/local/etc/ocp4.config
+   51  env
+   52  env|grep RHT
+   53  cat /usr/local/etc/ocp4.config
+   54  cat a
+   55  oc new-app --name echo https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#docker-build
+   56  oc new-app --name echo https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#docker-build --context-dir ubi-echo
+   57  oc get pods
+   58  oc get template postgresql-ephemeral -n openshiftz -o yaml
+   59  oc get template postgresql-ephemeral -n openshift -o yaml
+   60  oc get template postgresql-ephemeral -n openshift -o yaml>a
+   61  less a
+   62  oc logs -f bc/echo
+   63  oc get projects
+   64  oc project openshift
+   65  oc status
+   66  oc get pods
+   67  oc logs echo-659d7bf94d-5gkjd |tail -n 3
+   68  oc describe bc echo
+   69  oc describe is echo
+   70  oc describe deployment echo
+   71  oc get pods
+   72  oc describe bc echo
+   73  cd ubi-echo/
+   74  git commit -a -m 'Add a counter'
+   75  ls ..
+   76  rm ../a
+   77  git commit -a -m 'Add a counter'
+   78  git push
+   79  cd
+   80  oc start-build echo
+   81  oc logs -f bc/echo
+   82  cd
+   83  ls
+   84  cd DO288-apps/
+   85  ls
+   86  ls -l
+   87  ls s2i-scripts/
+   88  oc status
+   89  oc get pods
+   90  echo "oc logout" >> ~/.bash_logout
+   91  history
+   92  history|grep lab
+   93  lab docker-build finish
+   94  lab docker-build start
+   95  oc get pods
+   96  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+   97  source /usr/local/etc/ocp4.config
+   98  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+   99  oc get pods
+  100  oc projects
+  101  lab docker-build finish
+  102  lab build-template start
+  103  git checkout main
+  104  ls quotes
+  105  ls quotes/get.php 
+  106  cat quotes/get.php 
+  107  ls labs
+  108  cd ..
+  109  cd DO288
+  110  cd labs
+  111  ls
+  112  cd build-template/
+  113  ls
+  114  vi php-mysql-ephemeral.json 
+  115  source /usr/local/etc/ocp4.config
+  116  env
+  117  env|grep RHT
+  118  vi /usr/local/etc/ocp4.config
+  119  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  120  oc get templates -n openshift |grep php|grep mysql
+  121  oc new-project ${RHT_OCP4_DEV_USER}-common
+  122  oc create -f ~/DO288/labs/build-template/php-mysql-ephemeral.json
+  123  oc new-project ${RHT_OCP4_DEV_USER}-build-template
+  124  oc describe template php-mysql-ephemeral -n ${RHT_OCP4_DEV_USER}-common
+  125  cat ~/DO288/labs/build-template/create-app.sh
+  126  sh ~/DO288/labs/build-template/create-app.sh
+  127  oc logs -f buildconfig/quotesapi
+  128  oc get pods
+  129  oc get route
+  130  curl -si http://quote-whlniu.apps.eu46.prod.nextcle.comcat/get.php
+  131  curl -si http://quote-$RHT_OCP4_DEV_USER.$RHT_OCP4_WILDCARD_DOMAIN/get.php
+  132  echo $RHT_OCP4_WILDCARD_DOMAINcurl -si 
+  133  echo $RHT_OCP4_WILDCARD_DOMAIN
+  134  curl -si http://quote-whlniu.apps.eu46.prod.nextcle.com/get.php
+  135  history|grep git|grep clone
+  136  pwd
+  137  which lab
+  138  file /usr/local/bin/labcurl -si \
+  139  curl -si \
+  140  ile /usr/local/bin/labcurl -si \
+  141  file /usr/local/bin/lab
+  142  vi /usr/local/bin/lab
+  143  history|grep DO288
+  144  pwd
+  145  ls /home/student/DO288-apps/
+  146  which lab-configure
+  147  vi /usr/local/bin/lab-configure
+  148  cat /usr/local/etc/ocp4.config
+  149  cat /usr/local/etc/ocp4.default
+  150  cat /usr/local/etc/ocp4.defaults 
+  151  vi /usr/local/bin/lab-configure
+  152  cd
+  153  cd DO288
+  154  ls -xal
+  155  ls -l labs
+  156  ls -lR labs
+  157  ls -lR solutions/
+  158  oc get rolebindings
+  159  oc get groups
+  160  oc get pods
+  161  oc describe pod quotesdb-6b7ffcc649-zwdlb | grep IP
+  162  lab build-template finish
+  163  lab source-build start
+  164  source /usr/local/etc/ocp4.config
+  165  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  166  oc new-project ${RHT_OCP4_DEV_USER}-source-build
+  167  cd 
+  168  cd DO288-apps/
+  169  git checkout main
+  170  git checkout -b source-build
+  171  git push -u origin source-build
+  172  oc new-app --name greet --build-env npm_config_registry=http://${RHT_OCP4_NEXUS_SERVER}/repository/nodejs nodejs:12~https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#source-build --context-dir nodejs-helloworld
+  173  oc get pods
+  174  oc logs -f bc/greet
+  175  oc get pods
+  176  oc logs -f bc/greetls bc
+  177  ls bc
+  178  ls
+  179  ls ~/DO288/bc
+  180  python3 -m json.tool nodejs-helloworld/package.json
+  181  vi nodejs-helloworld/package.json
+  182  cd nodejs-helloworld/
+  183  git commit -a -m 'Fixed JSON syntax'
+  184  git push
+  185  cd
+  186  oc start-build --follow bc/greet
+  187  oc get pods
+  188  oc get bc
+  189  oc status
+  190  oc logs greet-f89967b4f-zr5ww
+  191  oc expose svc/greet
+  192  oc get route
+  193  curl http://greet-${RHT_OCP4_DEV_USER}-source-build.${RHT_OCP4_WILDCARD_DOMAIN}
+  194  lab source-build grade
+  195  yes
+  196  ldd /usr/bin/yes
+  197  ldd /lib64/ld-linux-x86-64.so.2
+  198  ldd libc.so.6
+  199  ldd /lib64/libc.so.6
+  200  ldd linux-vdso.so.1
+  201  cd
+  202  mkdir container
+  203  cd container
+  204  mkdir ioperf
+  205  cd ioperf/
+  206  vi Dockerfile
+  207  podman build
+  208  podman --help build
+  209  podman build -t ioperf
+  210  ls
+  211  ls -l
+  212  podman build -t ioperf .
+  213  podman login registry.access.redhat.com
+  214  podman build -t ioperf .
+  215  vi Dockerfile 
+  216  podman build -t ioperf .
+  217  vi Dockerfile 
+  218  podman build -t ioperf .
+  219  vi Dockerfile 
+  220  podman build -t ioperf .
+  221  vi Dockerfile 
+  222  podman build -t ioperf .
+  223  vi Dockerfile 
+  224  podman build -t ioperf .
+  225  vi Dockerfile 
+  226  podman build -t ioperf .
+  227  dnf
+  228  dnf|less
+  229  dnf help install
+  230  dnf|less
+  231  dnf install ioperf
+  232  vi Dockerfile 
+  233  podman build -t ioperf .
+  234  vi Dockerfile 
+  235  podman build -t ioperf .
+  236  vi Dockerfile 
+  237  podman build -t ioperf .
+  238  vi Dockerfile 
+  239  podman build -t ioperf .
+  240  vi Dockerfile 
+  241  podman build -t ioperf .
+  242  vi Dockerfile 
+  243  podman build -t ioperf .
+  244  yum search ioperf
+  245  vi Dockerfile 
+  246  yum search ioperf
+  247  podman build -t ioperf .
+  248  vi Dockerfile 
+  249  podman build -t ioperf .
+  250  vi Dockerfile 
+  251  podman build -t ioperf .
+  252  vi Dockerfile 
+  253  podman build -t ioperf .
+  254  vi Dockerfile 
+  255  podman build -t ioperf .
+  256  vi Dockerfile 
+  257  podman build -t ioperf .
+  258  vi Dockerfile 
+  259  podman build -t ioperf .
+  260  vi Dockerfile 
+  261  podman build -t ioperf .
+  262  vi Dockerfile 
+  263  podman build -t ioperf .
+  264  vi Dockerfile 
+  265  podman images
+  266  podman run -it registry.access.redhat.com/ubi8
+  267  vi Dockerfile 
+  268  ls /etc/yum.repos.d/
+  269  dnf list *perf*
+  270  cd /etc/yum.repos.d/
+  271  ls
+  272  cat redhat.repo 
+  273  cat rhel_dvd.repo 
+  274  cd -
+  275  cp /etc/yum.repos.d/rhel_dvd.repo .
+  276  vi Dockerfile 
+  277  podman run -it registry.access.redhat.com/ubi8
+  278  podman build -t ioperf .
+  279  vi Dockerfile 
+  280  podman build -t ioperf .
+  281  podman images
+  282   CD
+  283  cd
+  284  lab container-build start
+  285  source /usr/local/etc/ocp4.config
+  286  cd DO288-apps/
+  287  git checkout main
+  288  git checkout -b container-build
+  289  git push origin container-build
+  290  cd container-build/
+  291  vi Containerfile 
+  292  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  293  oc new-project ${RHT_OCP4_DEV_USER}-container-build
+  294  podman build --layers=false -t do288-apache .
+  295  vi Containerfile 
+  296  podman images
+  297  podman system prune
+  298  podman images
+  299  podman tag do288-apache quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  300  podman login quay.io -u ${RHT_OCP4_QUAY_USER}
+  301  podman push quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  302  oc new-app --name hola quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  303  podman images
+  304  oc new-app --name hola localhost/do288-apache
+  305  oc new-app --name hola c58d05981d0b
+  306  oc new-app --name hola localhost/do288-apache
+  307  oc new-app -h
+  308  oc new-app --name hola --docker-image=localhost/do288-apache
+  309  oc new-app --list
+  310  oc new-app --list|grep do288
+  311  oc new-app -h
+  312  oc new-app --name hola quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  313  history
+  314  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/do288-apache docker://quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  315  history
+  316  oc new-app --name hola quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  317  oc get pods
+  318  oc logs hola-6dd69f5c97-56q7j
+  319  oc delete all -l app=hola
+  320  pwd
+  321  vi Containerfile 
+  322  ls
+  323  cd src
+  324  ls
+  325  vi index.html 
+  326  pwd
+  327  cd ..
+  328  vi Containerfile 
+  329  pwd
+  330  vi Containerfile 
+  331  ls -xal
+  332  vi ~/DO288/labs/container-build/httpd-parent/Containerfile 
+  333  pwd
+  334  vi Containerfile 
+  335  it commit -a -m git commit -a -m \
+  336  git commit -a -m "Changed the Containerfile to enable running as a random uid on OpenShift"
+  337  vi Containerfile 
+  338  vi ~/DO288/solutions/container-build/Containerfile 
+  339  vi Containerfile 
+  340  git commit -a -m "Changed the Containerfile to enable running as a random uid on OpenShift"
+  341  git push
+  342  pwd
+  343  ls -xal
+  344  cd ..
+  345  git push
+  346  ls -xal
+  347  cd container-build/
+  348  ls -xal
+  349  git push
+  350  pwd
+  351  cd ..
+  352  git push
+  353  history
+  354  history|grep git
+  355  git status
+  356  git branches --all
+  357  git checkout -b container-build
+  358  git push origin container-build
+  359  cd container-build/
+  360  ls -xal
+  361  history
+  362  cd
+  363  lab container-build start
+  364  source /usr/local/etc/ocp4.config
+  365  cd DO288-apps/
+  366  git checkout main
+  367  git checkout -b container-build
+  368  git push origin container-build
+  369  cd container-build/
+  370  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  371  podman build --layers=false -t do288-apache .
+  372  podman tag do288-apache quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  373  podman login quay.io -u ${RHT_OCP4_QUAY_USER}
+  374  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/do288-apache docker://quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  375  oc new-app --name hola quay.io/${RHT_OCP4_QUAY_USER}/do288-apache
+  376  oc get pods
+  377  oc logs hola-6dd69f5c97-56q7j
+  378  oc get pods
+  379  oc status
+  380  oc status --suggest
+  381  clear
+  382  oc status --suggest
+  383  cd ..
+  384  rm -rf container-build/
+  385  ls
+  386  git pull
+  387  history
+  388  oc delete project ${RHT_OCP4_DEV_USER}-container-build
+  389  history|grep git
+  390  history|grep git|grep clone
+  391  cd ..
+  392  rm -rf DO288-apps/
+  393  cd
+  394  git clone https://github.com/wolfgangbrandl/DO288-apps.git
+  395  cd DO288-apps/
+  396  git status
+  397  lab container-build start
+  398  podman images
+  399  cd
+  400  ls
+  401  cd container/
+  402  ls
+  403  cd ioperf/
+  404  ls
+  405  vi Dockerfile 
+  406  podman build --layers=false -t iperf .
+  407  podman images
+  408  oc new-app localhost/iperf
+  409  oc new-app --help
+  410  history|grep git
+  411  history|grep podman
+  412  podman tag iperf quay.io/wolfgangbrandl/iperf
+  413  podman images
+  414  podman push quay.io/wolfgangbrandl/iperf
+  415  ls
+  416  vi forever.bash
+  417  bash forever.bash 
+  418  vi Dockerfile 
+  419  podman build --layers=false -t iperf .
+  420  podman tag iperf quay.io/wolfgangbrandl/iperf
+  421  podman push quay.io/wolfgangbrandl/iperf
+  422  history|grep skopeo
+  423  skopeo copy --format v2s1 ioperf:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  424  skopeo copy --format v2s1 container-storage:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  425  pwd
+  426  skopeo copy --format v2s1 container/ioperf:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  427  cd ..
+  428  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  429  history|grep oc
+  430  oc new-app --name iperfserver quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  431  oc get pods
+  432  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  433  oc get pods
+  434  oc debug iperfclient-746f9c4548-nbcqr
+  435  oc get pods
+  436  oc logs iperfclient-746f9c4548-nbcqr
+  437  cd ioperf/
+  438  vi Dockerfile 
+  439  podman build --layers=false -t iperf .
+  440  podman tag iperf quay.io/wolfgangbrandl/iperf
+  441  podman push quay.io/wolfgangbrandl/iperf
+  442  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  443  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  444  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  445  oc get pods
+  446  oc delete pod iperfclient-746f9c4548-nbcqr
+  447  oc delete pod iperfserver-6ccc4c4668-v84bb
+  448  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  449  oc get pods
+  450  oc delete pod iperfserver-6ccc4c4668-v84bb
+  451  oc get all
+  452  oc delete deployment.apps/iperfclient
+  453  oc delete deployment.apps/iperfserver
+  454  oc get all
+  455  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  456  oc status
+  457  oc get pods
+  458  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  459  oc delete deployment.apps/iperfserver
+  460  oc delete deployment.apps/iperfclient
+  461  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  462  oc get pods
+  463  oc logs iperfclient-746f9c4548-pms2f
+  464  vi Dockerfile 
+  465  podman build --layers=false -t iperf .
+  466  podman images
+  467  podman tag iperf quay.io/wolfgangbrandl/iperf
+  468  podman push quay.io/wolfgangbrandl/iperf
+  469  oc delete all --all
+  470  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  471  skopeo copy --format v2s1 containers-storage:quay.io/${RHT_OCP4_QUAY_USER}/iperf docker://quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  472  oc delete all --all
+  473  oc new-app --name iperfclient quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  474  oc status
+  475  oc get pods
+  476  oc new-app --name iperfserver quay.io/${RHT_OCP4_QUAY_USER}/iperf
+  477  oc get pods
+  478  vi Dockerfile 
+  479  oc rsh iperfserver-7d4fc78c87-rd9pj
+  480  oc search --all
+  481  oc --help
+  482  cd
+  483  git clone https://github.com/wolfgangbrandl/iperf.git
+  484  ls -lt
+  485  cd container/
+  486  cd ioperf/
+  487  ls
+  488  cp * ~/iperf
+  489  cd
+  490  cd iperf
+  491  ls
+  492  history>a
